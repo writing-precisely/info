@@ -15,7 +15,7 @@ author = 'Borys Belinsky'
 
 extensions = []
 
-templates_path = ['_templates']
+templates_path = ['templates']
 exclude_patterns = []
 
 
@@ -23,5 +23,7 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+html_theme = 'breeze'
+html_title = "Writing • Precisely"
+# html_theme_options = {'header_tabs': False}
+html_static_path = ['static']
