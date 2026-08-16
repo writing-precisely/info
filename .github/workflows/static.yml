@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Debug directory structure
+        run: ls -la # Displays all files and folders in the repository root
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
