@@ -1,0 +1,5 @@
+.. info | proper names
+
+.. |agent|  replace:: Anthropic Claude, Sonnet (Effort: High)
+.. |author| replace:: Borys Belinsky (borys.belinsky@protonmail.com)
+.. |dac|    replace:: *Documentation as Code*

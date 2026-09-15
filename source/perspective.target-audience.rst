@@ -4,6 +4,7 @@
 Target Audience
 ------------------------------------------------------------
 
+
 The target audience is one of the most important factors
 that influence how a text — any text — is written. All
 authoring guidelines for documentation recommend that the
@@ -54,14 +55,14 @@ overexplanation. Readers do not gain useful information when
 they encounter an explanation of something they already
 know.
 
-The opposite is also true: by assigning concepts to either
-the reader's scope or the text scope, the author can detect
-occurrences of *underexplanation*. I call this defect *among
-friends syndrome*: the author freely uses unexplained
-concepts assuming readers know them. This resembles a
-conversation where people may just mention facts, places,
-events, and they understand each other while a stranger
-would have no clue what they refer to.
+The opposite is also true: by assigning concepts properly to
+either the reader's scope or the text scope, the author can
+detect occurrences of *underexplanation*. This happens when
+the author freely uses unexplained concepts assuming readers
+know them. This resembles a conversation where friends share
+facts, mention places, and refer to events. They understand
+each other perfectly while a stranger would have no clue
+what they are referring to.
 
 .. _writing-precisely.target-audience.681:
 
@@ -74,8 +75,8 @@ As soon as the reader consumes the next concept from the text
 scope, the concept travels to the reader's scope. It is now
 known to the reader.
 
-The author *need not explain it* and may use the newly
-explained term in the following explanations.
+The author *need not explain it any more* and may use the newly
+introduced term in the following explanations.
 
 .. _writing-precisely.target-audience.330:
 
@@ -118,3 +119,15 @@ Specifying the prerequisites
    "Is it worth my time reading this material?" is answered
    by the question "Do you understand the concepts from the
    reader's scope for this material?"
+
+
+------------------------------------------------------------
+
+   :version: 1.0
+   :revision: 2026-09-01
+   :written.by: |author|
+   :assisted.by: |agent|
+
+
+.. include:: ./variables/names.txt
+

@@ -1,0 +1,21 @@
+.. info | common concepts
+..    conv /
+ prefix + | the term starts with the upper case letter
+
+
+.. |+a_code| replace:: Application code
+.. |+a_src|  replace:: Application source code
+.. |+app|    replace:: Application
+.. |+d_src|  replace:: Documentation sources
+.. |+doc|    replace:: Documentation
+.. |+sme|    replace:: Subject Matter Expert
+.. |a_code|  replace:: application code
+.. |a_src|   replace:: application source code
+.. |app|     replace:: application
+.. |d_src|   replace:: documentation sources
+.. |doc|     replace:: documentation
+.. |f.conf|  replace:: `.lab69` configuration file
+.. |t.fs|    replace:: field separator
+.. |t.cfs|   replace:: custom field separator
+.. |t.dfs|   replace:: default field separator
+
