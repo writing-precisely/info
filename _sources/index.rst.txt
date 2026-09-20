@@ -15,15 +15,18 @@ fundamental intentions (the order matters):
 .. toctree::
    :maxdepth: 2
 
-   perspectives
+   index.perspective
 
-.. conventions
-   cases
+.. index.convention
+   index.protocol
+   index.case
+   readme
 
-.. include:: ./variables/names.txt
 
 ------------------------------------------------------------
 
    :version: 1.0
    :revision: 2026-09-15
    :written.by: |author|
+
+.. include:: ./variables/names.txt
