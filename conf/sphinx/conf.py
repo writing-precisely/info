@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Writing Precisely'
-copyright = '2026, Borys Belinsky'
+copyright = '2026 Borys Belinsky (borys.belinsky@protonmail.com). Content licensed under CC BY 4.0.'
 author = 'Borys Belinsky'
 
 # -- General configuration ---------------------------------------------------
