@@ -1,4 +1,4 @@
-.. _writing-precisely.experimentation.storing:
+.. _writing-precisely.perspective.experimentation.storing:
 .. _perspective.295:
 
 ------------------------------------------------------------
@@ -110,7 +110,7 @@ be used as `record identifiers`.
 
 
 
-.. _perspective.295.directory.file.line.value.anything:
+.. _perspective.295-445:
 
 Value Is Anything but Not Nothing
 ============================================================
@@ -135,7 +135,7 @@ Null values: Not Supported
 
 ------------------------------------------------------------
 
-   :version: 0.1
+   :version: 1.0
    :revision: 2026-09-20
    :written.by:   |author|
    :assisted.by: Anthropic Claude, Opus 5
