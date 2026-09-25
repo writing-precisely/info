@@ -1,4 +1,4 @@
-.. _writing-precisely.documentation-as-code:
+.. _writing-precisely.perspective.documentation-as-code:
 .. _perspective.838:
 
 ------------------------------------------------------------
@@ -27,7 +27,7 @@ However, *sharing a toolchain* is not the same as *treating*
    Besides, the tools were never specific to |a_code| in the
    first place.
 
-.. _writing-precisely.documentation-as-code.412:
+.. _perspective.838.412:
 
 I Will Show You the Source: What Do You See?
 ============================================================
@@ -64,7 +64,9 @@ rendered output discards.
    procedure to a profound and important process while
    staying in the same context.
 
-.. _writing-precisely.documentation-as-code.115:
+
+
+.. _perspective.838-115:
 
 Use a Pipeline: They Are All the Same.
 ============================================================
@@ -93,7 +95,9 @@ On stage 3, the changes are merged to trigger the build
 process. (runs automatically; nothing interesting happens
 after it has been set up.)
 
-.. _writing-precisely.documentation-as-code.645:
+
+
+.. _perspective.838-645:
 
 Stage 3: Building the Output
 ============================================================
@@ -117,7 +121,9 @@ this case calling the building a stage is too much.
    If this stage is not boring, then the documentation is
    built on top of an inapt framework.
 
-.. _writing-precisely.documentation-as-code.629:
+
+
+.. _perspective.838-629:
 
 Stage 2: Reviewing the Changes
 ============================================================
@@ -150,7 +156,8 @@ become an author, too.
    such demands.
 
 
-.. _writing-precisely.documentation-as-code.735:
+
+.. _perspective.838-735:
 
 Stage 1: code|doc
 ============================================================
@@ -180,16 +187,18 @@ It is reasonable to suggest that, as products, |doc| and
 |a_code| are comparable. This comparison has exactly one
 beneficiary: the author.
 
-.. _writing-precisely.documentation-as-code.168:
+
+
+.. _perspective.838-168:
 
 code|doc: Effective Immeditely
 ============================================================
 
 A practice proven for |a_code| carries a value that |doc|
-may be missing. It is not |a_code| being useful by introducing C++
-structures in prose. It is viewing parts of |doc| **based on
-principles** that make those practices valuable. Just a few
-examples:
+may be missing. It is not |a_code| being useful by
+introducing C++ structures in prose. It is viewing parts of
+|doc| **based on principles** that make those practices
+valuable. Just a few examples:
 
 Variables
 
@@ -220,7 +229,7 @@ exactly one place along with related details. Best practices
 change form because |doc| brings the same discipline into a
 different context.
 
-.. _writing-precisely.documentation-as-code.396:
+.. _perspective.838-396:
 
 Reasoning from Another Context: Is What You Get
 ============================================================

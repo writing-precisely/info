@@ -1,11 +1,8 @@
-.. _writing_precisely.case.0001:
-.. _writing_precisely.case.summary:
+.. _writing_precisely.case.452-1:
 
 ------------------------------------------------------------
-[Case 0001] Summary Based on Reader/Text Scope
+AI Generated Summary
 ------------------------------------------------------------
-
-:revision: 2026-09-07
 
 .. include | summary output matters and must be defined as a document type
 
@@ -18,3 +15,13 @@ When requesting an LLM agent to make a summary of text it is
 not easy to align the result to the expected level of
 detail. In simpler terms: how can you be sure that important
 details have not been omitted.
+
+------------------------------------------------------------
+
+   :version: 0.1
+   :revision: 2026-09-20
+   :written.by:   |author|
+   :assisted.by:  |agent|
+
+.. include:: ./variables/common.txt
+.. include:: ./variables/names.txt

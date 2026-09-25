@@ -1,0 +1,9 @@
+
+.. list-table::
+   :header-rows: 1
+   :widths: 75 25
+
+   * - Proposition
+     - Version
+   * - :ref:`proposition.543`
+     - v1.0

@@ -1,4 +1,4 @@
-.. _writing-precisely.target-audience:
+.. _writing-precisely.perspectivetarget-audience:
 .. _perspective.452:
 
 ------------------------------------------------------------
@@ -24,7 +24,9 @@ place in this simple model.
 Yet, the target audience is in fact one of the most
 important factors for text, if it is mapped to concepts.
 
-.. _writing-precisely.target-audience.320:
+
+
+.. _writing-precisely.perspective.target-audience.320:
 
 Explanation Declined
 ============================================================
@@ -43,7 +45,7 @@ outside of this collection. Hence, the value of any text is
 in the size of this second collection, which literally
 constitutes the novelty of information for readers.
 
-.. _writing-precisely.target-audience.917:
+.. _writing-precisely.perspective.target-audience.917:
 
 Explanation Details
 ============================================================
@@ -65,7 +67,7 @@ facts, mention places, and refer to events. They understand
 each other perfectly while a stranger would have no clue
 what they are referring to.
 
-.. _writing-precisely.target-audience.681:
+.. _writing-precisely.perspective.target-audience.681:
 
 Target Audience Expansion
 ============================================================
@@ -79,7 +81,7 @@ known to the reader.
 The author *need not explain it any more* and may use the newly
 introduced term in the following explanations.
 
-.. _writing-precisely.target-audience.330:
+.. _writing-precisely.perspective.target-audience.330:
 
 Target Audience Value
 ============================================================

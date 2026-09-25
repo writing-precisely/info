@@ -1,19 +1,14 @@
-.. _writing-precisely.conv.lab69:
+.. _writing-precisely.protocol.295-1.lab69:
+.. _protocol.lab69:
 
 ------------------------------------------------------------
-Convention: Lab69
+Lab69
 ------------------------------------------------------------
 
-:version: 0.1
-:revision: 2026-09-07
-:written by: |author| (|email|)
+|this| is a local schemaless storage system for
+experimental data.
 
-.. rubric:: Purpose
-
-Lab69 is a local schemaless storage system for experimental
-data.
-
-.. _writing-precisely.conv.lab69.definition:
+.. _protocol.lab69.definition:
 
 Definitions
 ============================================================
@@ -21,46 +16,16 @@ Definitions
 .. glossary::
    :sorted:
 
-
    .lab69
 
       ~ is a special configuration file that stores
       configuration settings of the current data catalog
       (the data catalog that contains the given ~).
 
-      ~ uses the `kile` format for storing data, see
-      :ref:`writing-precisely.conv.kile`.
+      ~ uses the `keel` format for storing data, see
+      :ref:`protocol.keel`.
 
-      .. list-table::
-	 :header-rows: 1
-	 :widths: 40 40 20
-	 
-	 * - setting
-	   - purpose
-	   - required?
-	 * - name
-	   - human-readable reference
-	   - yes
-	 * - attribute.catalog
-	   - reference to a catalog that defines applicable
-             attribute codes and names.
-	   - no
-	 * - attribute.separator
-	   - custom field separator
-	   - no
-	 * - attribute.code.vocabulary
-	   - custom attribute vocabulary
-	   - no
-	 * - attribute.code.length
-	   - custom attribute length
-	   - no
-	 * - signature.vocabulary
-	   - custom signature vocabulary
-	   - no
-	 * - signature.length
-	   - custom signature length
-	   - no
-  
+      .. include:: tables/table.dot-lab69.txt
       .. seealso::
 
 	 - :term:`Attribute catalog`
@@ -70,10 +35,13 @@ Definitions
 
 
 
-
    Data library
 
       ~ is a collection of data catalogs.
+
+      .. seealso::
+
+	 - :term:`Data catalog`
 
 
 
@@ -83,6 +51,11 @@ Definitions
       code of an attribute present in the containing data
       catalog.
 
+      .. seealso::
+
+	 - :term:`Attribute`
+	 - :term:`Data catalog`
+
 
 
    Attribute
@@ -91,17 +64,12 @@ Definitions
       attribute entries. As the name, attributes use the
       registered attribute codes from the attribute catalog.
 
-      .. important::
-
-	 Any lines not recognized as valid attribute entries are not
-	 included into the attribute.
-
       .. seealso::
 
 	 - :term:`Attribute code`
 	 - :term:`Attribute catalog`
 	 - :term:`Attribute entry`
-	 - :term:`Valid attribute`
+
 
 
    Attribute catalog
@@ -209,6 +177,7 @@ Definitions
 	 - :term:`Attribute code vocabulary`
 
 
+
    Default attribute code length
 
       Matches the value of the `minimum attribute code length`
@@ -266,9 +235,10 @@ Definitions
    Attribute entry
 
       ~ is a line broken into two fields: signature and
-      value. The signature is delimited from data by the field
-      separator. If no custom separator is provided, the
-      default separator applies.
+      value. The signature is delimited from data by the
+      field separator. If no custom separator is provided in
+      |f.conf|, the default separator applies. ~ must
+      contain all valid components.
 
       .. seealso::
 
@@ -332,6 +302,14 @@ Definitions
       If |t.cfs| is not provided in the |f.conf| then the |t.dfs|
       takes effect.
 
+      .. important::
+	 
+	 1. If a |t.cfs| is available then attribute entries
+            that use the |t.dfs| are not valid.
+	 2. If a |t.cfs| is not provided then attribute entries that
+            use other |t.fs| separator than the |t.dfs| are
+            not valid.
+
       .. seealso::
 
 	 - :term:`Attribute entry`
@@ -359,7 +337,7 @@ Definitions
 	 - :term:`Attribute entry`
 
 
-   Record Signature
+   Record signature
 
       ~ is a unique identifier of the attribute entry. In an attribute
       entry, ~ is implemented as a sequence of characters to the left
@@ -367,17 +345,27 @@ Definitions
       the signature vocabulary.
 
       Characters outside of the signature vocabulary are not permitted
-      in the signature. Non-conforming lines are ignored
+      in the signature. 
   
       The number of characters that may constitute the signature is
       determined by the signature length.
 
+      .. important::
+
+	 1. If the signature contains symbols outside of the
+            effective signature vocabulary then the attribute entry is not valid.
+	 2. If the length of the signature does not match
+            the effective signature length then the
+            attribute entry is not valid.
+
       .. seealso::
 
-	 - :term:`Attribute entry`
-	 - :term:`Signature vocabulary`
+         - :term:`Attribute entry`
+         - :term:`Signature vocabulary`
+	 - :term:`Signature length`
 
-    Signature vocabulary
+
+   Signature vocabulary
 
       ~ is a set of unique non-whitespace characters which constitue
       the record signature of an attribute entry. If no custom ~ is
@@ -389,7 +377,7 @@ Definitions
 	- :term:`Record signature`
 	- :term:`Default signature vocabulary`
 
-    Default signature vocabulary
+   Default signature vocabulary
 
       ~ is a signature vocabulary which is applied if
       the `.lab69` configuration file does not define a
@@ -401,7 +389,7 @@ Definitions
 
 	 - :term:`Signature vocabulary`
 
-    Signature length
+   Signature length
 
       ~ is the number of characters from the signature vocabulary that
       the record signature must contain. If no custom ~ is provided
@@ -409,10 +397,10 @@ Definitions
 
       .. seealso::
 
-	 - :term:`RecordSignature`
+	 - :term:`Record Signature`
 	 - :term:`Default signature length`
 
-    Default signature length
+   Default signature length
 
 
       ~ is the value of the signature length if the effective |f.conf|
@@ -422,11 +410,15 @@ Definitions
 
 	 - :term:`Signature length`
 
-    Entry value
+   Entry value
 
       ~ is a sequence of characters to the right of the |t.fs| in an
       attribute entry. It is ok for the value to include characters
       that make up the |t.fs|.
+
+      .. important::
+
+	 ~ that consists of whitespace characters only is not valid.
 
       .. seealso::
 
@@ -441,40 +433,55 @@ Definitions
 Operations
 ============================================================
 
-.. _conv.lab69.op.data-catalog:
+.. glossary:: 
+   :sorted:
 
-Data catalog
+   Data catalog: create
+
+      - Create a directory on the file system.
+      - Name the data catalog according to the requirements of your
+	project.
+      - Create |f.conf|.
+
+      .. seealso::
+
+	 - :term:`Data catalog`
+	 - :term:`.lab69: create`
+
+   Data catalog: delete
+
+      This operation is as trivial as recursively deleting a
+      directory from the file system.
+
+   .lab69: create
+
+      - Create an empty `.lab69` in the requested directory.
+      - Fill in all settings from [:term:`.lab69`].
+      - Enter the available default values.
+
+   Attribute catalog: create
+
+      - Create a data catalog
+      - Create an attribute
+
+   Attribute: create
+
+      - Request and query the attribute name
+      - In the current data catalog, create a file with the
+        attribute code that corresponds to the requested
+        attribute name and the `.lab69` extension.
+
+
+
 ------------------------------------------------------------
 
-.. rubric:: Create a directory on the file system.
-- Name the data catalog according to the requirements of your
-  project.
+   :version: 0.1
+   :revision: 2026-09-20
+   :written.by:   |author|
+   :assisted.by:  |agent|
 
-:reading:
-- Collect all attributes.
-:end:
-:updating:
-This operation is not applicable.
-:end:
-:deleting:
-This operation is as trivial as deleting a directory from
-the file system.
-:end:
+.. |this| replace:: `Lab69`
 
-** Attribute catalog
-
-:creating:
-- Create a data catalog
-- Create an attribute
-- Open the 
-:end:
-:finding:
-:end:
-
-** Attribute
-
-:creating:
-:end:
 
 .. include:: ./variables/common.txt
-.. include:: ./variables/name.txt
+.. include:: ./variables/names.txt

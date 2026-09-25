@@ -1,7 +1,7 @@
 .. info | common concepts
-..    conv /
- prefix + | the term starts with the upper case letter
-
+.. conventions /
+     prefix +  | the term starts with the upper case letter
+     prefix h. | heading
 
 .. |+a_code| replace:: Application code
 .. |+a_src|  replace:: Application source code
@@ -18,4 +18,8 @@
 .. |t.fs|    replace:: field separator
 .. |t.cfs|   replace:: custom field separator
 .. |t.dfs|   replace:: default field separator
-.. |ordered-not-stable| replace:: Keep it mind that sequential numbers are **not** recognized as stable because they feature the `ordered` property in addition to `unique`, which negatively affects the stability due to the complicated logic for assigning next identifiers.
+
+.. [predefined headings]
+
+.. |h.ref|       replace:: \+ References
+.. |h.page-info| replace:: \+ Page Info

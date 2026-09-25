@@ -1,0 +1,5 @@
+
+Keep it mind that sequential numbers are **not** recognized
+as stable because they feature the `ordered` property in
+addition to `unique`, which negatively affects the stability
+due to the complicated logic for assigning next identifiers.

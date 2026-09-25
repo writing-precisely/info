@@ -1,0 +1,10 @@
+
+.. list-table::
+   :header-rows: 1
+   :widths: 75 25
+
+   * - Proposition
+     - Version
+   * - :ref:`perspective.295`
+     - v1.0
+

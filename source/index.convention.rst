@@ -1,10 +1,8 @@
-.. _writing_precisely.convention:
+.. _writing_precisely.index.convention:
 
 ------------------------------------------------------------
 Conventions
 ------------------------------------------------------------
-
-:revision: 2026-09-14
 
 `Conventions` are definitions of information tools.
 

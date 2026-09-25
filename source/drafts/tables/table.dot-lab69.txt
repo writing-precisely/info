@@ -1,0 +1,30 @@
+.. list-table::
+	 :header-rows: 1
+	 :widths: 40 40 20
+	 
+	 * - setting
+	   - purpose
+	   - required?
+	 * - name
+	   - human-readable reference
+	   - yes
+	 * - attribute.catalog
+	   - reference to a catalog that defines applicable
+             attribute codes and names.
+	   - no
+	 * - attribute.separator
+	   - custom field separator
+	   - no
+	 * - attribute.code.vocabulary
+	   - custom attribute vocabulary
+	   - no
+	 * - attribute.code.length
+	   - custom attribute length
+	   - no
+	 * - signature.vocabulary
+	   - custom signature vocabulary
+	   - no
+	 * - signature.length
+	   - custom signature length
+	   - no
+  
