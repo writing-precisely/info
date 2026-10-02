@@ -1,0 +1,223 @@
+#+title: Simple data storage model
+#+author: Borys Belinsky
+
+* Purpose
+The simplest possible model for writing, storing and transmitting data.
+Expressiveness is sacrificed on purpose: the vocabulary is small enough
+that information gets its structure naturally. Data that does not fit is
+a sign the data (and probably the code) needs refactoring, not that the
+model needs to grow.
+
+Motivation:
+- Datatypes in YAML and JSON are fake. Types are a contract between
+  producer and consumer, not a property of the text.
+- Data files are not where analysis happens. They are parsed and handed
+  to programs in whatever form suits them, so the syntax can stay minimal.
+- Partial data must be usable: no waiting for a closing token, no
+  requirement for a well-formed document.
+- Data formats are not only for applications. They help organise
+  information whose structure is not yet clear while content still has
+  to be produced. Syntax noise and rigid structures distract from that
+  work.
+
+This document defines concepts only. Concrete characters belong to an
+implementation (see Keel).
+
+* Symbols used in this document
+- N :: a name
+- V :: a value
+- T :: the secondary separator
+- $ :: the primary separator
+
+Every symbol written stands for something that must be present.
+=[ ]= marks an optional part. Records are written one after another:
+=NT$ TV$ T$= is three records.
+
+* Principles
+- Concepts first :: define concepts and capabilities first, then apply
+  syntax.
+- Structure emerges :: the model must not force structural decisions
+  before the writer is ready to make them.
+- No tooling required :: data is readable and writable in any plain
+  text editor.
+- Tools add capabilities, not rules :: a parser extends what the data
+  means; it never adds obligations for the writer (quoting, escaping,
+  closing braces).
+- Layers :: each layer only adds; it never changes the meaning of what a
+  lower layer defines. Data valid at layer N is valid, with the same
+  meaning, at every higher layer. Lower layers keep the parser trivial;
+  a system uses the lowest layer it needs.
+- Catalog :: the model and every implementation carry the full catalog
+  of possible record constructs, each with its status. The catalog is
+  the overview of capabilities.
+- Lossless modes :: an implementation may present data in several modes
+  (e.g. reading, writing, storage). Converting between modes must never
+  lose data. Losslessness is about data, not spelling: two spellings of
+  the same records are the same data. Not negotiable.
+
+Observation: a simpler syntax requires a more sophisticated parser.
+Simplicity does not remove complexity; it moves it into the parser.
+
+* Statuses
+- defined :: the construct has a meaning at this layer.
+- unsupported :: the construct is defined at a higher layer, not at
+  this one. In the model, it shows how features are distributed across
+  layers; new versions of the model change this picture. In an
+  implementation, it marks a construct the model defines but the
+  implementation does not handle; the implementation must declare what
+  it does on encountering it.
+- undefined :: no layer of the model gives the construct a meaning.
+  An implementation must resolve every undefined construct as one of:
+  - a distinct role
+  - an error
+  - a skippable record
+- excluded :: deliberately left out of the model, at every layer. Not an
+  oversight: it does not belong because of how the model is defined.
+
+Excluded:
+- null :: there is no syntax for "nothing", and special values would
+  open the door to chaos. Constructs that would carry only nothing
+  (an empty sequence) are excluded.
+- datatypes :: no primitive types (numbers, strings, booleans and so
+  on). Everything in a file is characters; reading a number from them is
+  a best guess. Format-level types also promise less than they seem: a
+  field like =age= holds a number, but -3, 0 and 300 are all numbers and
+  not all are valid ages. The application must process and validate the
+  value anyway, so typing belongs to the contract between producer and
+  consumer, not to the model.
+- escaping :: not needed; see the dividing separator.
+
+* Inheritance
+An implementation inherits from the model or from another
+implementation (its parent), including the parent's catalog and
+statuses.
+
+- It may resolve what the parent leaves undefined.
+- It may support what the parent leaves unsupported.
+- It may declare a construct the parent defines as unsupported, with
+  its handling.
+- It must not change the meaning of a defined construct, or define an
+  excluded one.
+
+* Separators
+- primary separator ($) :: marks where one record ends and the next
+  begins.
+- secondary separator (T) :: marks where the name ends.
+- separator rule :: the two must differ, and neither may contain the
+  other.
+- separator levels :: the model defines two levels, primary and
+  secondary. A third level is left to implementations, within the
+  extension boundary.
+
+* Parser boundary
+The model accounts for parser complexity so that each layer is a
+practical tool, not a theoretical possibility. A parser may ask only
+these questions:
+
+Within a record:
+- Is there a name?
+- Is there a value?
+- Where are the separators, and how many are there in a row?
+
+Across records, from state built by previous records:
+- Are we inside a sequence? (layer 1)
+- How deep is the nesting? (layer 2)
+
+A record is classified from its own content and the state left by the
+records before it, never by records that follow (no lookahead). Every
+record can therefore be classified as soon as it arrives.
+
+A layer or implementation that needs another question must name it and
+justify it.
+
+* Extension boundary (draft)
+An implementation may:
+- choose its concrete separators
+- resolve undefined constructs
+- use a third separator level as shorthand that expands into model
+  records
+- define modes and padding
+- set conventions for names or values (e.g. metadata)
+
+An implementation must not change defined meanings or define excluded
+constructs.
+
+* Layer 1: pairs and simple sequences
+Goal: the simplest useful data and a trivial parser (two states:
+outside a sequence and inside one).
+
+- data :: an ordered sequence of records. Order is significant.
+- record :: the content between two primary separators.
+- name :: a non-empty sequence of characters containing neither
+  separator. Names may repeat; data is a sequence, not a map.
+- value :: a non-empty sequence of characters not containing the
+  primary separator. It may contain T.
+- dividing separator :: the first T in a record. Every later T is an
+  ordinary character of the value, so no escaping is needed.
+- pair :: =NTV$= outside a sequence.
+- sequence :: a named, ordered group of items: =NT$=, then items
+  =TV$=, then the end =T$=.
+- open sequence :: a sequence whose end has not been encountered. Its
+  items received so far are valid; the sequence is not finished.
+
+* Layer 2: associations and nesting
+Goal: structured data. The parser needs a stack, nothing more.
+
+- association :: =NTV$= inside a sequence.
+- member :: an association, an item or a nested sequence.
+- nesting :: =NT$= inside an open sequence opens a child sequence.
+  =T$= closes the innermost open sequence.
+- start with first item :: =NTTV$= is =NT$ TV$= in one record.
+- close all :: a run of primary separators closes every open sequence.
+  With no open sequence it has no effect.
+
+Capability: a sequence may mix associations, items and nested
+sequences. Lists and associations need no separate structures.
+
+* Catalog
+| construct     | context | layer 1     | layer 2     | meaning                    |
+|---------------+---------+-------------+-------------+----------------------------|
+| NTV$          | outside | defined     | defined     | pair                       |
+| NTV$          | inside  | unsupported | defined     | association                |
+| NT$           | outside | defined     | defined     | sequence start             |
+| NT$           | inside  | unsupported | defined     | nested sequence start      |
+| TV$           | outside | undefined   | undefined   |                            |
+| TV$           | inside  | defined     | defined     | item                       |
+| T$            | outside | undefined   | undefined   |                            |
+| T$            | inside  | defined     | defined     | sequence end               |
+| NTTV$         | any     | unsupported | defined     | sequence start, first item |
+| $$ (run)      | any     | unsupported | defined     | close all                  |
+| no T (X$)     | any     | undefined   | undefined   | name and value ambiguous   |
+| NT$ T$, NTT$  | any     | excluded    | excluded    | empty sequence (null)      |
+| other T runs  | any     | undefined   | undefined   | e.g. TTV$, TT$, NTTT…      |
+
+* Scope notes
+- Depth :: the model sets no limit. Practical limits come from
+  maintainability and the parser. An implementation may set a limit and
+  must declare it.
+- Metadata :: not a concept of the model. An implementation may offer
+  it within the spec by its own conventions for names or values (e.g. a
+  reserved name for a metadata sequence).
+- Streaming :: a lost end mark leaves sequences open; only the receiver
+  can detect it. Close all is a resynchronisation point. Where data loss
+  is a real risk or tracking is crucial, limit or avoid sequences and let
+  each record carry its own context (shown in Keel notation):
+  #+begin_example
+  seq name |
+  seq id   | 123
+  123      | item 1
+  123      | item 2
+  123      | item 3
+  (end of sequence not received)
+  | item 4
+  | item 5
+  #+end_example
+  Records 4 and 5 carry no id, so the receiver can tell they do not
+  belong to sequence 123.
+
+* Deferred to layer 3
+- Multiline values as a distinct structure. A sequence can carry lines
+  of text, but it is not a multiline value.
+- A record starting with a sequence separator (e.g. Keel's leading =/=).
+- Anonymous sequences.
+The last two conflict with nesting as defined at layer 2.

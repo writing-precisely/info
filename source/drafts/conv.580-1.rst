@@ -1,5 +1,3 @@
-.. _writing-precisely.conv.elementary-data-format:
-.. _988:
 .. _writing-precisely.conv.580-1:
 
 ------------------------------------------------------------

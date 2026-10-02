@@ -1,0 +1,7 @@
+.. list-table::
+   :header-rows: 1
+
+   * - Perspective
+     - Version
+   * - :ref:`Target Audience <perspective.452>`
+     - v1.0

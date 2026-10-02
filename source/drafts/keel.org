@@ -1,8 +1,7 @@
-.. _writing-precisely.protocol.keel:
 
-------------------------------------------------------------
-Keel
-------------------------------------------------------------
+
+* About
+
 
 Keel is the first implementation of the [[file:simple-data-storage-model.org][simple data storage model]].
 It must be both practical and illustrative.
@@ -100,12 +99,7 @@ undefined.
 - Can a document declare other separators? Where and how?
 - Which spelling does writing mode prefer (=a / b /= or =a / b |=)?
 
-------------------------------------------------------------
 
-   :version: 0.1
-   :revision: 2026-09-20
-   :written.by:   |author|
-   :assisted.by:  |agent|
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt
