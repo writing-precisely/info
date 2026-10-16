@@ -1,5 +1,4 @@
 .. _writing-precisely.proposition.543:
-.. _proposition.543:
 
 ------------------------------------------------------------
 Storage for Exploration Data
@@ -39,15 +38,12 @@ Assumptions
 |h.ref|
 ============================================================
 
-.. include:: tables/ref.proposition.543.txt
+:ref:`writing-precisely.perspective.295`
 
 |h.page-info|
 ============================================================
 
-:version: 1.0
-:revision: 2026-09-25
-:written.by:   |author|
-:assisted.by: Anthropic Claude, Opus 5
+.. include:: tables/page-info.proposition.543.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

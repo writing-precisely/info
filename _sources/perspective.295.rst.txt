@@ -1,5 +1,4 @@
-.. _writing-precisely.perspective.experimentation.storing:
-.. _perspective.295:
+.. _writing-precisely.perspective.295:
 
 ------------------------------------------------------------
 Storing for Experimentation
@@ -52,7 +51,7 @@ hasn't tried this?), or recording findings of my research
 where I don't even know how to group those findings
 upfront.
 
-.. _perspective.295.directory.file.line:
+.. _writing-precisely.perspective.295-03:
 
 A Directory of Files; A File of Lines
 ============================================================
@@ -76,7 +75,7 @@ information as records. Records have attributes.
    must not contain the `separator`. A single space will
    suffice as the `separator`. The `value` is anything.
 
-.. _perspective.295.directory.file.line.relation.many-to-many:
+.. _writing-precisely.perspective.295-98:
 
 Only Many-to-Many Relations Are Supported
 ------------------------------------------------------------
@@ -92,9 +91,7 @@ The files that participate in the relation must differ from
 attribute files. For example, they may use their own naming
 conventions.
 
-
-
-.. _perspective.295.directory.file.line.record-indentifier.feature:
+.. _writing-precisely.perspective.295-73:
 
 Record Identifiers Have Only Two Features
 ------------------------------------------------------------
@@ -102,15 +99,14 @@ Record Identifiers Have Only Two Features
 A `record indentifier` has only two properties: it may not
 contain the `separator` and it must be unique in an
 attribute file. *Uniqueness* is required to enable
-:ref:`relations
-<perspective.295.directory.file.line.relation.many-to-many>`.
+:ref:`relations <writing-precisely.perspective.295-98>`.
 
 No other property is allowed. Even sequence numbers cannot
 be used as `record identifiers`.
 
 
 
-.. _perspective.295-445:
+.. _writing-precisely.perspective.295-44:
 
 Value Is Anything but Not Nothing
 ============================================================
@@ -132,13 +128,10 @@ Null values: Not Supported
    missing if the `record identifier` is not found for the
    attribute.
 
+|h.page-info|
+============================================================
 
-------------------------------------------------------------
-
-   :version: 1.0
-   :revision: 2026-09-20
-   :written.by:   |author|
-   :assisted.by: Anthropic Claude, Opus 5
+.. include:: tables/page-info.perspective.295.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

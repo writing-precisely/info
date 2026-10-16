@@ -17,7 +17,10 @@ Perspectives
    :maxdepth: 1
    :glob:
 
+   perspective.528
+   perspective.452
    perspective.672
+   perspective.394
    perspective.*
 
 

@@ -1,5 +1,4 @@
-.. _writing-precisely.perspective.documentation-as-code:
-.. _perspective.838:
+.. _writing-precisely.perspective.838:
 
 ------------------------------------------------------------
 Documentation as Code: Shifting Value
@@ -27,7 +26,7 @@ However, *sharing a toolchain* is not the same as *treating*
    Besides, the tools were never specific to |a_code| in the
    first place.
 
-.. _perspective.838.412:
+.. _writing-precisely.perspective.838-41:
 
 I Will Show You the Source: What Do You See?
 ============================================================
@@ -66,7 +65,7 @@ rendered output discards.
 
 
 
-.. _perspective.838-115:
+.. _writing-precisely.perspective.838-15:
 
 Use a Pipeline: They Are All the Same.
 ============================================================
@@ -97,7 +96,7 @@ after it has been set up.)
 
 
 
-.. _perspective.838-645:
+.. _writing-precisely.perspective.838-64:
 
 Stage 3: Building the Output
 ============================================================
@@ -123,7 +122,7 @@ this case calling the building a stage is too much.
 
 
 
-.. _perspective.838-629:
+.. _writing-precisely.perspective.838-29:
 
 Stage 2: Reviewing the Changes
 ============================================================
@@ -156,8 +155,7 @@ become an author, too.
    such demands.
 
 
-
-.. _perspective.838-735:
+.. _writing-precisely.perspective.838-75:
 
 Stage 1: code|doc
 ============================================================
@@ -189,7 +187,7 @@ beneficiary: the author.
 
 
 
-.. _perspective.838-168:
+.. _writing-precisely.perspective.838-16:
 
 code|doc: Effective Immeditely
 ============================================================
@@ -229,7 +227,7 @@ exactly one place along with related details. Best practices
 change form because |doc| brings the same discipline into a
 different context.
 
-.. _perspective.838-396:
+.. _writing-precisely.perspective.838-39:
 
 Reasoning from Another Context: Is What You Get
 ============================================================
@@ -242,12 +240,10 @@ form. A practice proven for one can be expected to have an
 equivalent in the other. And the toolchain has nothing to do
 with it.
 
-------------------------------------------------------------
+|h.page-info|
+============================================================
 
-   :version: 1.0
-   :revision: 2026-09-15
-   :written.by:   |author|
-   :assisted.by:  |agent|
+.. include:: tables/page-info.perspective.838.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

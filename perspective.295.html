@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="With so many solutions for storing data ranging from versatile, fast, and feature-rich database management systems down to spreadsheets, plain text is a reasonable choice when it comes to storing a..." />
 <meta name="description" content="With so many solutions for storing data ranging from versatile, fast, and feature-rich database management systems down to spreadsheets, plain text is a reasonable choice when it comes to storing a..." />
 <meta name="twitter:card" content="summary_large_image" />
-<title>Storing for Experimentation - Writing • Precisely</title><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Target Audience" href="perspective.452.html"><link rel="prev" title="[Foundation] Closed Term System" href="perspective.672.html"><script data-cfasync="false">(function(){
+<title>Storing for Experimentation - Writing • Precisely</title><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Documentation as Code: Shifting Value" href="perspective.838.html"><link rel="prev" title="[Foundation] Closing and Layering a Term System" href="perspective.394.html"><script data-cfasync="false">(function(){
     const m = localStorage.getItem("breeze-mode") || "auto";
     const d = document.documentElement.dataset;
     d.mode = m;
@@ -105,9 +105,11 @@
   
   
     <nav class="bz-sidebar-nav" aria-label="Section Navigation"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="perspective.528.html">[Foundation] Human-AI Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.452.html">[Foundation] Target Audience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="perspective.672.html">[Foundation] Closed Term System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.394.html">[Foundation] Closing and Layering a Term System</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Storing for Experimentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="perspective.452.html">Target Audience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="perspective.838.html">Documentation as Code: Shifting Value</a></li>
 </ul>
 </nav>
@@ -175,7 +177,7 @@
       </li></ul>
   </div>
 </div><section id="storing-for-experimentation">
-<span id="perspective-295"></span><span id="writing-precisely-perspective-experimentation-storing"></span><h1>Storing for Experimentation<a class="headerlink" href="#storing-for-experimentation" title="Link to this heading">#</a></h1>
+<span id="writing-precisely-perspective-295"></span><h1>Storing for Experimentation<a class="headerlink" href="#storing-for-experimentation" title="Link to this heading">#</a></h1>
 <p>With so many solutions for storing data ranging from
 versatile, fast, and feature-rich database management
 systems down to spreadsheets, plain text is a reasonable
@@ -218,7 +220,7 @@ hasn’t tried this?), or recording findings of my research
 where I don’t even know how to group those findings
 upfront.</p>
 <section id="a-directory-of-files-a-file-of-lines">
-<span id="perspective-295-directory-file-line"></span><h2>A Directory of Files; A File of Lines<a class="headerlink" href="#a-directory-of-files-a-file-of-lines" title="Link to this heading">#</a></h2>
+<span id="writing-precisely-perspective-295-03"></span><h2>A Directory of Files; A File of Lines<a class="headerlink" href="#a-directory-of-files-a-file-of-lines" title="Link to this heading">#</a></h2>
 <p>The conceptual model is traditional: the system stores
 information as records. Records have attributes.</p>
 <blockquote>
@@ -238,7 +240,7 @@ must not contain the <cite>separator</cite>. A single space will
 suffice as the <cite>separator</cite>. The <cite>value</cite> is anything.</p>
 </div></blockquote>
 <section id="only-many-to-many-relations-are-supported">
-<span id="perspective-295-directory-file-line-relation-many-to-many"></span><h3>Only Many-to-Many Relations Are Supported<a class="headerlink" href="#only-many-to-many-relations-are-supported" title="Link to this heading">#</a></h3>
+<span id="writing-precisely-perspective-295-98"></span><h3>Only Many-to-Many Relations Are Supported<a class="headerlink" href="#only-many-to-many-relations-are-supported" title="Link to this heading">#</a></h3>
 <p>A connection between records is itself a record, kept in a
 directory of its own. That directory follows the same rules
 as any other: its files are attributes, and its lines are
@@ -250,17 +252,17 @@ attribute files. For example, they may use their own naming
 conventions.</p>
 </section>
 <section id="record-identifiers-have-only-two-features">
-<span id="perspective-295-directory-file-line-record-indentifier-feature"></span><h3>Record Identifiers Have Only Two Features<a class="headerlink" href="#record-identifiers-have-only-two-features" title="Link to this heading">#</a></h3>
+<span id="writing-precisely-perspective-295-73"></span><h3>Record Identifiers Have Only Two Features<a class="headerlink" href="#record-identifiers-have-only-two-features" title="Link to this heading">#</a></h3>
 <p>A <cite>record indentifier</cite> has only two properties: it may not
 contain the <cite>separator</cite> and it must be unique in an
 attribute file. <em>Uniqueness</em> is required to enable
-<a class="reference internal" href="#perspective-295-directory-file-line-relation-many-to-many"><span class="std std-ref">relations</span></a>.</p>
+<a class="reference internal" href="#writing-precisely-perspective-295-98"><span class="std std-ref">relations</span></a>.</p>
 <p>No other property is allowed. Even sequence numbers cannot
 be used as <cite>record identifiers</cite>.</p>
 </section>
 </section>
 <section id="value-is-anything-but-not-nothing">
-<span id="perspective-295-445"></span><h2>Value Is Anything but Not Nothing<a class="headerlink" href="#value-is-anything-but-not-nothing" title="Link to this heading">#</a></h2>
+<span id="writing-precisely-perspective-295-44"></span><h2>Value Is Anything but Not Nothing<a class="headerlink" href="#value-is-anything-but-not-nothing" title="Link to this heading">#</a></h2>
 <p>The <cite>value</cite> may contain anything. No characters have to be
 escaped even if a <cite>value</cite> contains the
 <cite>separator</cite>. Semantically, a line is a pair: the <cite>record
@@ -277,33 +279,41 @@ value. No special checks.</p>
 missing if the <cite>record identifier</cite> is not found for the
 attribute.</p>
 </div></blockquote>
-<hr class="docutils" />
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">version<span class="colon">:</span></dt>
-<dd class="field-odd"><p>1.0</p>
-</dd>
-<dt class="field-even">revision<span class="colon">:</span></dt>
-<dd class="field-even"><p>2026-09-20</p>
-</dd>
-<dt class="field-odd">written.by<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Borys Belinsky (<a class="reference external" href="mailto:borys&#46;belinsky&#37;&#52;&#48;protonmail&#46;com">borys<span>&#46;</span>belinsky<span>&#64;</span>protonmail<span>&#46;</span>com</a>)</p>
-</dd>
-<dt class="field-even">assisted.by<span class="colon">:</span></dt>
-<dd class="field-even"><p>Anthropic Claude, Opus 5</p>
-</dd>
-</dl>
-</div></blockquote>
+</section>
+<section id="h-page-info">
+<h2>+ Page Info<a class="headerlink" href="#h-page-info" title="Link to this heading">#</a></h2>
+<div class="table colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 75.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Revision</p></td>
+<td><p>2026-09-20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Written.by</p></td>
+<td><p>Borys Belinsky (<a class="reference external" href="mailto:borys&#46;belinsky&#37;&#52;&#48;protonmail&#46;com">borys<span>&#46;</span>belinsky<span>&#64;</span>protonmail<span>&#46;</span>com</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Assisted.by</p></td>
+<td><p>Anthropic Claude, Opus</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 
 </article><footer class="bz-article-footer">
   
   
-    <nav class="bz-related-pages" aria-label="Related pages navigation"><a class="bz-related-pages-previous" href="perspective.672.html" rel="prev">
-    <span>Previous</span><span class="bz-related-pages-title">[Foundation] Closed Term System</span></a><a class="bz-related-pages-next" href="perspective.452.html" rel="next">
+    <nav class="bz-related-pages" aria-label="Related pages navigation"><a class="bz-related-pages-previous" href="perspective.394.html" rel="prev">
+    <span>Previous</span><span class="bz-related-pages-title">[Foundation] Closing and Layering a Term System</span></a><a class="bz-related-pages-next" href="perspective.838.html" rel="next">
     <span>Next</span>
-    <span class="bz-related-pages-title">Target Audience</span>
+    <span class="bz-related-pages-title">Documentation as Code: Shifting Value</span>
   </a></nav>
   
 
@@ -318,6 +328,7 @@ attribute.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#value-is-anything-but-not-nothing">Value Is Anything but Not Nothing</a></li>
+<li><a class="reference internal" href="#h-page-info">+ Page Info</a></li>
 </ul></nav>
   
     

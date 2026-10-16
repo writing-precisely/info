@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="[Foundation] Closing and Layering a Term System" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="perspective.394.html" />
+<meta property="og:site_name" content="Writing Precisely" />
+<meta property="og:description" content="Within a closed term system, communication is happening on another level: AI does not have to wait for a human to provide details of the system. After a human introduces the idea and formulates the..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="_images/social_previews/summary_perspective.394_c2a5e388.png" />
+<meta property="og:image:alt" content="Within a closed term system, communication is happening on another level: AI does not have to wait for a human to provide details of the system. After a human introduces the idea and formulates the..." />
+<meta name="description" content="Within a closed term system, communication is happening on another level: AI does not have to wait for a human to provide details of the system. After a human introduces the idea and formulates the..." />
+<meta name="twitter:card" content="summary_large_image" />
+<title>[Foundation] Closing and Layering a Term System - Writing • Precisely</title><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Storing for Experimentation" href="perspective.295.html"><link rel="prev" title="[Foundation] Closed Term System" href="perspective.672.html"><script data-cfasync="false">(function(){
+    const m = localStorage.getItem("breeze-mode") || "auto";
+    const d = document.documentElement.dataset;
+    d.mode = m;
+    d.theme = m === "auto"
+      ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+      : m;
+  })();
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8e8a900e" /><link rel="stylesheet" type="text/css" href="_static/styles/breeze.css?v=7c62c100" /><script defer="defer" src="_static/scripts/breeze.js?v=dac9f8c6"></script></head>
+<body>
+  
+  
+  <div class="bz-skip-to-content"><a href="#bz-main-content">Skip to main content</a></div><header class="bz-header-main">
+  <div class="bz-header-start"><a class="bz-header-brand" href="index.html">
+  
+  
+  <span>Writing • Precisely</span>
+</a>
+  </div>
+  <div class="bz-header-end"><div id="docsearch" class="bz-search-button">
+  <a
+    href="search.html#q"
+    aria-label="Search the docs"
+    data-tooltip="Search the docs"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 -1 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+      />
+    </svg>
+    <span>Search</span>
+    <kbd>Ctrl+K</kbd>
+  </a>
+</div><div class="bz-theme-switcher">
+  <button aria-label="Switch theme" data-tooltip="Switch theme">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="only-light" fill="currentColor">
+      <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"></path>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="only-dark" fill="currentColor">
+      <path d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"></path>
+    </svg>
+  </button>
+</div>
+  </div>
+</header><nav class="bz-header-tabs" aria-label="Primary Navigation"><label
+  class="bz-sidebar-primary-toggle"
+  for="bz-sidebar-primary"
+  role="button"
+  tabindex="0"
+  aria-label="Toggle site navigation"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h12.5"
+    />
+  </svg>
+</label><ul><li class="toctree-l1 current"><a class="reference internal" href="index.perspective.html">Perspectives</a></li><li class="toctree-l1"><a class="reference internal" href="index.proposition.html">Propositions</a></li><li class="toctree-l1"><a class="reference internal" href="index.convention.html">Conventions</a></li></ul><div class="bz-dropdown">
+    <button aria-haspopup="true" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="19" cy="12" r="1" />
+          <circle cx="5" cy="12" r="1" />
+        </g>
+      </svg>
+    </button>
+    <ul role="menu" aria-hidden="true"></ul>
+  </div>
+</nav><hr class="bz-header-hr">
+  <div class="bz-content"><aside class="bz-sidebar-primary" data-drawer="bz-sidebar-primary">
+  
+  
+    <nav class="bz-sidebar-nav" aria-label="Section Navigation"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="perspective.528.html">[Foundation] Human-AI Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.452.html">[Foundation] Target Audience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.672.html">[Foundation] Closed Term System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">[Foundation] Closing and Layering a Term System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.295.html">Storing for Experimentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspective.838.html">Documentation as Code: Shifting Value</a></li>
+</ul>
+</nav>
+  
+
+</aside><main id="bz-main-content"><header class="bz-article-header">
+  
+  
+    <nav class="bz-breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li class="bz-breadcrumbs-home">
+      <a href="index.html" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
+        </svg>
+      </a>
+    </li><li class="bz-breadcrumbs-parent">
+      <a href="index.perspective.html">Perspectives</a>
+    </li><li class="bz-breadcrumbs-current">
+      <span>[Foundation] Closing and Layering a Term System</span>
+    </li>
+  </ol>
+</nav>
+  
+<label
+  class="bz-sidebar-secondary-toggle"
+  for="bz-sidebar-secondary"
+  role="button"
+  tabindex="0"
+  aria-label="Toggle table of contents"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M3.75 6.75H20.25 M11.25 12H20.25 M7.75 17.25H20.25"
+    />
+  </svg>
+</label></header><article class="bz-article-main" role="main"><div class="bz-page-actions" role="group" aria-label="Page actions">
+  <button data-copy-source="_sources/perspective.394.rst.txt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M7.024 3.75c0-.966.784-1.75 1.75-1.75H20.25c.966 0 1.75.784 1.75 1.75v11.498a1.75 1.75 0 0 1-1.75 1.75H8.774a1.75 1.75 0 0 1-1.75-1.75Zm1.75-.25a.25.25 0 0 0-.25.25v11.498c0 .139.112.25.25.25H20.25a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25Z"></path><path d="M1.995 10.749a1.75 1.75 0 0 1 1.75-1.751H5.25a.75.75 0 1 1 0 1.5H3.745a.25.25 0 0 0-.25.25L3.5 20.25c0 .138.111.25.25.25h9.5a.25.25 0 0 0 .25-.25v-1.51a.75.75 0 1 1 1.5 0v1.51A1.75 1.75 0 0 1 13.25 22h-9.5A1.75 1.75 0 0 1 2 20.25l-.005-9.501Z"></path></svg>
+    <span>Copy page</span>
+  </button>
+  <div class="bz-dropdown">
+    <button
+      aria-label="More actions"
+      aria-haspopup="true"
+      aria-expanded="false"
+    ></button>
+    <ul role="menu" aria-hidden="true">
+      <li>
+        <a href="#" role="menuitem" data-copy-source="_sources/perspective.394.rst.txt">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M7.024 3.75c0-.966.784-1.75 1.75-1.75H20.25c.966 0 1.75.784 1.75 1.75v11.498a1.75 1.75 0 0 1-1.75 1.75H8.774a1.75 1.75 0 0 1-1.75-1.75Zm1.75-.25a.25.25 0 0 0-.25.25v11.498c0 .139.112.25.25.25H20.25a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25Z"></path><path d="M1.995 10.749a1.75 1.75 0 0 1 1.75-1.751H5.25a.75.75 0 1 1 0 1.5H3.745a.25.25 0 0 0-.25.25L3.5 20.25c0 .138.111.25.25.25h9.5a.25.25 0 0 0 .25-.25v-1.51a.75.75 0 1 1 1.5 0v1.51A1.75 1.75 0 0 1 13.25 22h-9.5A1.75 1.75 0 0 1 2 20.25l-.005-9.501Z"></path></svg>
+          <span>Copy page</span>
+        </a>
+      </li>
+      <li>
+        <a href="_sources/perspective.394.rst.txt" role="menuitem" class="bz-page-actions-external" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"></path><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"></path></svg>
+          <span>View source</span>
+        </a>
+      </li></ul>
+  </div>
+</div><section id="foundation-closing-and-layering-a-term-system">
+<span id="writing-precisely-perspective-394"></span><h1>[Foundation] Closing and Layering a Term System<a class="headerlink" href="#foundation-closing-and-layering-a-term-system" title="Link to this heading">#</a></h1>
+<blockquote class="highlights">
+<div><p>Within a closed term system, communication is happening on
+another level: AI does not have to wait for a human to
+provide details of the system. After a human introduces the
+idea and formulates the problem or the desired state,
+whatever the closed term system is designed to be
+initialized with, a human interacts with AI via the formal
+texts that define the system. This effectively makes it an
+interface between a human and AI.</p>
+</div></blockquote>
+<p>Reliability of <a class="reference internal" href="perspective.672.html#writing-precisely-perspective-672"><span class="std std-ref">a closed term system</span></a> depends on the structure
+of the closure and the consistency of the levels of detail.</p>
+<section id="structure-of-the-closure">
+<span id="writing-precisely-perspective-394-87"></span><h2>Structure of the Closure<a class="headerlink" href="#structure-of-the-closure" title="Link to this heading">#</a></h2>
+<p>Ideally, every term in the system is defined within the
+system through its relations to other terms. The chain of
+definitions cannot go on indefinitely: at some point, there
+are terms the system cannot define. These are foundation
+terms. The system owns them, but it does not own their
+definitions, which rest on what the reader already
+knows. Instead of defining foundation terms, the system
+introduces them in a dedicated, formalized space, using
+<a class="reference internal" href="convention.274.html#term-Expected-term-conv.-274"><span class="xref std std-term">expected terms</span></a> carefully
+chosen for this particular system. In this way, a closed
+term system gives them a stable base. Without it, foundation
+terms invite different readings, and since every other term
+is built on them, a misread foundation term distorts the
+understanding of the whole system.</p>
+<p>A problem statement is an example of such a space. It is
+written before any solution exists, and it names what the
+solution will be about in words the reader already
+understands. Everything the solution later defines is built
+on the terms the problem statement introduced.</p>
+</section>
+<section id="levels-of-detail">
+<span id="writing-precisely-perspective-394-06"></span><h2>Levels of Detail<a class="headerlink" href="#levels-of-detail" title="Link to this heading">#</a></h2>
+<p>The consistency of the levels of detail deals with another
+problem: without it, the structure of the system becomes
+obscure. What does an online store consist of? A product
+catalog, a shopping cart, a checkout, and a message queue.
+Each of these terms can be well defined, and the list looks
+complete. Yet the message queue is how the checkout passes
+orders on for processing: it is not a part of the store next
+to the checkout but a part of how the checkout is
+implemented. The answer flattens two levels of detail into
+one.</p>
+<p>To avoid this, each term must be placed on exactly one
+level. Although glossaries are the designated place for term
+definitions, it is more common for definitions to be included
+in structured documents that present information in the form
+of a narrative.</p>
+<p>The level of detail can apply to any structural unit,
+ranging from a sentence up to the whole document, in the
+sense that all terms in the unit belong to the same level. If
+the level of detail is associated with a small unit, such as
+a sentence, switching from one level to another happens
+frequently. The switch not only requires more effort to
+understand the meaning but also creates an additional risk of
+incorrect interpretation.</p>
+<p>A natural approach is to keep the chosen level of detail
+within a section and declare it in the heading. This works
+for each section individually. When the context grows to
+include more than one section, the switch becomes much harder
+to notice: the declaration stays with its section, while the
+reader’s context does not. A good example of this problem is
+cross-references, where the reader is recommended to continue
+reading elsewhere for more detail and arrives at a different
+level in the middle of a thought.</p>
+<p>The most stable control of the level of detail is through
+whole documents whose kind implies the level of detail or
+which state it explicitly. Documents whose structure is
+predefined are particularly reliable in this respect, as each
+section must follow a set of requirements. Links to other
+documents make switching the level of detail a predictable
+transition or continuation: unlike a cross-reference into
+another section, a link leads to a document whose level the
+reader knows before starting to read.</p>
+</section>
+<section id="tiers-term-catalogs-in-document-types">
+<h2>Tiers: Term Catalogs in Document Types<a class="headerlink" href="#tiers-term-catalogs-in-document-types" title="Link to this heading">#</a></h2>
+<p>When a closed term system is implemented in a set of
+documents, the level of detail becomes its organizing
+principle. Suppose the level of detail is applied
+consistently per document, and each document is treated as
+an instance of a document type: a set of predefined sections
+whose content is created and modified according to specific
+requirements. Then the whole system can be reasoned about as
+a network of relations among those document types.</p>
+<p>When terms are extracted from an instance, the associated
+document type provides simple criteria for determining which
+terms belong together. The terms defined in an instance of a
+specific document type form a closed term system, too: terms
+defined in instances of more general document types are known
+to its reader and work within it as expected terms. Provided
+the level of detail covers the whole document, the terms in
+the catalog can be evaluated as expected or provided terms,
+which reveals problems such as missing term relations or
+<a class="reference internal" href="perspective.452.html#writing-precisely-perspective-452-91"><span class="std std-ref">excessive details</span></a>.</p>
+<p>The catalog of terms defined in one instance constitutes a
+separate tier within the closed term system being designed.
+If each term is defined in only one instance, it belongs to
+exactly one tier, and the document type of that instance
+gives it its level of detail.</p>
+</section>
+<section id="orders-arrangements-of-tiers">
+<h2>Orders: Arrangements of Tiers<a class="headerlink" href="#orders-arrangements-of-tiers" title="Link to this heading">#</a></h2>
+<p>With an effective arrangement of tiers, a closed term system
+becomes repeatable: the same arrangement can be used to build
+new systems. An order is a template for such an arrangement.
+It is a lightweight construct. It mandates document types,
+which contain no content of their own, associates each of
+them with a level of detail, and prescribes which more
+general document types supply terms to which more specific
+ones.</p>
+<p>When an order is instantiated, the instances of its document
+types form a closed term system as the product, and their
+term catalogs become its tiers.</p>
+</section>
+<section id="h-ref">
+<h2>+ References<a class="headerlink" href="#h-ref" title="Link to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="perspective.528.html#writing-precisely-perspective-528"><span class="std std-ref">[Foundation] Human-AI Interface</span></a></p></li>
+<li><p><a class="reference internal" href="perspective.672.html#writing-precisely-perspective-672"><span class="std std-ref">[Foundation] Closed Term System</span></a></p></li>
+</ul>
+</div>
+</section>
+<section id="h-page-info">
+<h2>+ Page Info<a class="headerlink" href="#h-page-info" title="Link to this heading">#</a></h2>
+<div class="table colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 75.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Revision</p></td>
+<td><p>2026-10-16</p></td>
+</tr>
+<tr class="row-odd"><td><p>Written.by</p></td>
+<td><p>Borys Belinsky (<a class="reference external" href="mailto:borys&#46;belinsky&#37;&#52;&#48;protonmail&#46;com">borys<span>&#46;</span>belinsky<span>&#64;</span>protonmail<span>&#46;</span>com</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Assisted.by</p></td>
+<td><p>Anthropic Claude, Opus 5.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+</article><footer class="bz-article-footer">
+  
+  
+    <nav class="bz-related-pages" aria-label="Related pages navigation"><a class="bz-related-pages-previous" href="perspective.672.html" rel="prev">
+    <span>Previous</span><span class="bz-related-pages-title">[Foundation] Closed Term System</span></a><a class="bz-related-pages-next" href="perspective.295.html" rel="next">
+    <span>Next</span>
+    <span class="bz-related-pages-title">Storing for Experimentation</span>
+  </a></nav>
+  
+
+</footer><aside class="bz-sidebar-secondary" data-drawer="bz-sidebar-secondary">
+  
+  
+    <nav class="bz-sidebar-toc" aria-label="Table of contents">
+  <p>On this page</p><ul>
+<li><a class="reference internal" href="#structure-of-the-closure">Structure of the Closure</a></li>
+<li><a class="reference internal" href="#levels-of-detail">Levels of Detail</a></li>
+<li><a class="reference internal" href="#tiers-term-catalogs-in-document-types">Tiers:​ Term Catalogs in Document Types</a></li>
+<li><a class="reference internal" href="#orders-arrangements-of-tiers">Orders:​ Arrangements of Tiers</a></li>
+<li><a class="reference internal" href="#h-ref">+ References</a></li>
+<li><a class="reference internal" href="#h-page-info">+ Page Info</a></li>
+</ul></nav>
+  
+    
+
+
+  
+    
+  
+    
+  
+
+</aside></main>
+  </div>
+<footer class="bz-footer">
+  <div class="bz-footer-copyright"><p class="bz-copyright">© Copyright 2026 Borys Belinsky (borys.belinsky@protonmail.com). Content licensed under CC BY 4.0.</p><p>
+    
+    
+    
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/aksiome/breeze">Breeze theme</a>.
+    
+  </p>
+</div>
+</footer><a href="#" class="bz-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
+    </svg>
+    <span>Back to top</span>
+  </a>
+  <label class="bz-overlay bz-overlay-primary" for="bz-sidebar-primary"></label>
+  <label class="bz-overlay bz-overlay-secondary" for="bz-sidebar-secondary"></label>
+  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle section navigation">
+  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="Toggle table of contents"><script src="_static/documentation_options.js?v=5929fcd5"></script><script src="_static/doctools.js?v=fd6eb6e6"></script><script src="_static/sphinx_highlight.js?v=6ffebe34"></script></body>
+</html>

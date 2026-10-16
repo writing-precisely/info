@@ -1,5 +1,4 @@
-.. _writing-precisely.foundation.closed-term-system:
-.. _perspective.672:
+.. _writing-precisely.perspective.672:
 
 ------------------------------------------------------------
 [Foundation] Closed Term System
@@ -12,6 +11,9 @@ but because lack of precision leaves room for
 interpretation, assumptions, ambiguity and many other evils
 that lead the intended product to failure. So, specificity
 matters.
+
+
+.. _writing-precisely.perspective.672-12:
 
 Written as a Product, Read as a System
 ============================================================
@@ -36,6 +38,9 @@ operates on *terms*, not ideas. The reason is that *terms*
 must be defined, such that readers do not substitute their
 own understanding for what is actually meant in text.
 
+
+.. _writing-precisely.perspective.672-43:
+
 Closed by Design
 ============================================================
 
@@ -57,6 +62,9 @@ when text is produced as a system of logically dependent
 sentences, and for analysis, when text is reconstructed as a
 system of terms.
 
+
+.. _writing-precisely.perspective.672-18:
+
 Closed System: Communication Model
 ============================================================
 
@@ -65,20 +73,21 @@ frivolous interpretation. In it, specificity is not a
 problem any more because *specific* is an inherent property
 of every term.
 
-Within a closed term system, communication is happening on
-another level: AI does not have to wait for a human to provide
-details of the system. After a human introduces the idea and
-formulates the problem or the desired state, whatever the
-closed term system is designed to be initialized with, a human
-interacts with AI via the formal texts that define the
-system. This effectively makes it an interface between a
-human and AI.
+.. include:: partials/featured.perspective.672.txt
 
-------------------------------------------------------------
+|h.ref|
+============================================================
 
-   :version: 1.0
-   :revision: 2026-09-25
-   :written.by: |author|
+.. seealso::
 
+   - :ref:`writing-precisely.perspective.528`
+   - :ref:`writing-precisely.perspective.394`
+
+|h.page-info|
+============================================================
+
+.. include:: tables/page-info.perspective.672.txt
+
+.. include:: ./variables/common.txt
 .. include:: ./variables/names.txt
 

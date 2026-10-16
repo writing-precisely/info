@@ -1,4 +1,4 @@
-.. _writing-precisely.conv.274:
+.. _writing-precisely.convention.274:
 
 ------------------------------------------------------------
 Expected and Provided Terms
@@ -6,11 +6,9 @@ Expected and Provided Terms
 
 .. highlights:: Purpose
 
-   This convention defines |this|. It is a method for
-   evaluating a text by what it actually explains: the text
-   is analyzed through its terms, each of which is either an
-   expected term or a provided term. All other definitions
-   build on this distinction.
+   This convention defines a method for evaluating a text by
+   what it actually explains: the text is analyzed through
+   its terms.
 
 
 Definitions
@@ -614,15 +612,12 @@ Definitions
 |h.ref|
 ============================================================
 
-.. include:: tables/ref.conv.274.txt
-
+:ref:`writing-precisely.proposition.317`
 
 |h.page-info|
 ============================================================
 
-.. include:: tables/page-info.conv.274.txt
-
-.. |this| replace:: `Expected and Provided Terms`
+.. include:: tables/page-info.convention.274.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

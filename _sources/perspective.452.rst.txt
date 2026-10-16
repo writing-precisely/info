@@ -1,8 +1,7 @@
-.. _writing-precisely.perspectivetarget-audience:
-.. _perspective.452:
+.. _writing-precisely.perspective.452:
 
 ------------------------------------------------------------
-Target Audience
+[Foundation] Target Audience
 ------------------------------------------------------------
 
 
@@ -26,17 +25,12 @@ important factors for text, if it is mapped to concepts.
 
 
 
-.. _writing-precisely.perspective.target-audience.320:
+.. _writing-precisely.perspective.452-32:
 
 Explanation Declined
 ============================================================
 
-Regardless of who the readers are, the author can view the
-target audience as a collection of concepts from the
-text. Specifically, the target audience comprises all
-concepts that *need not be explained* because the reader
-must know these concepts already in order to be able to
-understand what the author is telling them.
+.. include:: ./partials/featured.perspective.452.txt
 
 This perspective produces an interesting effect. With the
 target audience being a collection of known concepts, the
@@ -45,7 +39,7 @@ outside of this collection. Hence, the value of any text is
 in the size of this second collection, which literally
 constitutes the novelty of information for readers.
 
-.. _writing-precisely.perspective.target-audience.917:
+.. _writing-precisely.perspective.452-91:
 
 Explanation Details
 ============================================================
@@ -67,7 +61,7 @@ facts, mention places, and refer to events. They understand
 each other perfectly while a stranger would have no clue
 what they are referring to.
 
-.. _writing-precisely.perspective.target-audience.681:
+.. _writing-precisely.perspective.452-81:
 
 Target Audience Expansion
 ============================================================
@@ -81,7 +75,7 @@ known to the reader.
 The author *need not explain it any more* and may use the newly
 introduced term in the following explanations.
 
-.. _writing-precisely.perspective.target-audience.330:
+.. _writing-precisely.perspective.452-33:
 
 Target Audience Value
 ============================================================
@@ -94,8 +88,7 @@ Target Audience Value
 
 The distribution of concepts between the reader's scope and
 the text scope is a boring kind of analysis that authors
-wouldn't bother doing. They can trust their intuition and
-determine what to explain and how.
+wouldn't bother doing. They can trust their intuition.
 
 However, with the reader's scope and the text scope, there
 are unexpected gains if the author chooses to interface with
@@ -123,14 +116,10 @@ Specifying the prerequisites
    by the question "Do you understand the concepts from the
    reader's scope for this material?"
 
+|h.page-info|
+============================================================
 
-------------------------------------------------------------
+.. include:: tables/page-info.perspective.452.txt
 
-   :version: 1.0
-   :revision: 2026-09-01
-   :written.by: |author|
-   :assisted.by: |agent|
-
-
+.. include:: ./variables/common.txt
 .. include:: ./variables/names.txt
-
