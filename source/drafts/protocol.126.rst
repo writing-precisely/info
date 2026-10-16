@@ -1,4 +1,4 @@
-.. _writing-precisely.protocol.keel:
+.. _writing-precisely.protocol.126:
 
 ------------------------------------------------------------
 Keel
@@ -100,12 +100,17 @@ undefined.
 - Can a document declare other separators? Where and how?
 - Which spelling does writing mode prefer (=a / b /= or =a / b |=)?
 
-------------------------------------------------------------
 
-   :version: 0.1
-   :revision: 2026-09-20
-   :written.by:   |author|
-   :assisted.by:  |agent|
+|h.ref|
+============================================================
+
+:ref:`writing-precisely.convention.325`
+
+
+|h.page-info|
+============================================================
+
+.. include:: tables/page-info.protocol.126.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

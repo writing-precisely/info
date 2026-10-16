@@ -1,4 +1,4 @@
-.. _writing-precisely.conv.696:
+.. _writing-precisely.convention.696:
 
 ------------------------------------------------------------
 Local Information Storage Model
@@ -6,10 +6,10 @@ Local Information Storage Model
 
 .. highlights:: Purpose
 
-   This convention defines |this|. It is a schemaless model
+   This convention defines a schemaless model
    for storing information the structure of which is not
    fully known in advance and should be expected to change
-   or be redefined over time.
+   or be redefined frequently.
 
 
 
@@ -637,15 +637,13 @@ Definitions
 |h.ref|
 ============================================================
 
-.. include:: tables/ref.conv.696.txt
+:ref:`writing-precisely.proposition.543`
 
 
 |h.page-info|
 ============================================================
 
-.. include:: tables/page-info.conv.696.txt
-
-.. |this| replace:: `Local Information Storage Model`
+.. include:: tables/page-info.convention.696.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

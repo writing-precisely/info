@@ -25,7 +25,37 @@ Writing Precisely
    system of interrelated terms.
 
 
-------------------------------------------------------------
+Featured Perspectives
+============================================================
+
+.. rubric:: :ref:`writing-precisely.perspective.528`
+
+.. include:: ./partials/featured.perspective.528.txt
+
+
+.. rubric:: :ref:`writing-precisely.perspective.452`
+
+.. include:: ./partials/featured.perspective.452.txt
+
+
+.. rubric:: :ref:`writing-precisely.perspective.672`
+
+.. include:: ./partials/featured.perspective.672.txt
+
+
+
+What's New
+============================================================
+
+.. rubric:: Perspectives
+
+- :ref:`writing-precisely.perspective.528`
+- :ref:`writing-precisely.perspective.394`
+
+
+
+On This Site
+============================================================
 
 .. toctree::
    :maxdepth: 2

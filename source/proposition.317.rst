@@ -1,5 +1,4 @@
 .. _writing-precisely.proposition.317:
-.. _proposition.317:
 
 ------------------------------------------------------------
 Extracting Net Value of Text
@@ -44,15 +43,12 @@ Assumptions
 |h.ref|
 ============================================================
 
-.. include:: tables/ref.proposition.317.txt
+:ref:`writing-precisely.perspective.452`
 
 |h.page-info|
 ============================================================
 
-:version: 1.0
-:revision: 2026-10-02
-:written.by:   |author|
-:assisted.by: Anthropic Claude, Opus 5.5
+.. include:: tables/page-info.proposition.317.txt
 
 .. include:: ./variables/common.txt
 .. include:: ./variables/names.txt

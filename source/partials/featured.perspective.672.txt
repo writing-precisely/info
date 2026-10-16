@@ -1,0 +1,8 @@
+Within a closed term system, communication is happening on
+another level: AI does not have to wait for a human to
+provide details of the system. After a human introduces the
+idea and formulates the problem or the desired state,
+whatever the closed term system is designed to be
+initialized with, a human interacts with AI via the formal
+texts that define the system. This effectively makes it an
+interface between a human and AI.

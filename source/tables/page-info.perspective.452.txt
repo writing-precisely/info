@@ -1,0 +1,12 @@
+.. list-table::
+   :header-rows: 0
+   :widths: 75 25
+
+   * - Version
+     - 1.1
+   * - Revision
+     - 2026-09-01
+   * - Written.by
+     - |author|
+   * - Assisted.by
+     - Anthropic Claude, Sonnet

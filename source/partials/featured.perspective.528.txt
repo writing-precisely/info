@@ -1,0 +1,5 @@
+human-AI interaction needs another basis, such that
+control is distributed between us and artificial intelligence. If what
+we control is the product that we are shaping, then the requirement to
+use well defined language will focus on the product and apply to all
+controlling agents, human or artificially intelligent.
