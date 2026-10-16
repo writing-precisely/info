@@ -1,7 +1,7 @@
 .. _writing-precisely.perspective.394:
 
 ------------------------------------------------------------
-[Foundation] Closing and Layering a Term System
+Closing and Layering a Term System
 ------------------------------------------------------------
 
 .. highlights::

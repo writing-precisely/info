@@ -1,7 +1,7 @@
 .. _writing-precisely.perspective.672:
 
 ------------------------------------------------------------
-[Foundation] Closed Term System
+Closed Term System
 ------------------------------------------------------------
 
 When describing to AI your intention—requesting information

@@ -11,16 +11,28 @@ Perspectives
    a solid argumentation. In most cases, I don't even attempt
    to prove I am right.
 
-------------------------------------------------------------
+
+
+Foundation
+============================================================
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
    perspective.528
    perspective.452
    perspective.672
    perspective.394
-   perspective.*
+
+
+Findings
+============================================================
+
+.. toctree::
+   :maxdepth: 1
+
+
+   perspective.295
+   perspective.838
 
 

@@ -1,7 +1,7 @@
 .. _writing-precisely.perspective.528:
 
 ------------------------------------------------------------
-[Foundation] Human-AI Interface
+Human-AI Interface
 ------------------------------------------------------------
 
 User interface is about control. The right amount of
