@@ -1,7 +1,7 @@
 .. _writing-precisely.perspective.452:
 
 ------------------------------------------------------------
-[Foundation] Target Audience
+Target Audience
 ------------------------------------------------------------
 
 
